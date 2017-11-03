@@ -125,7 +125,7 @@ export class NgWidget implements OnInit, OnDestroy, DoCheck {
 
 	public onResizeStartEvent(): void {
 		const event: INgWidgetEvent = this.getEventOutput();
-		this._renderer.setElementStyle(this._ngEl.nativeElement, 'z-index', String(++this._ngWidgetContainer.zIndex));
+		this._renderer.setElementStyle(this._ngEl.nativeElement, 'z-index', String(++this._ngWidgetContainer.zIndex+35));
 		this.onResizeStart.emit(event);
 		this.onResizeAny.emit(event);
 		this.onChangeStart.emit(event);
@@ -151,7 +151,7 @@ export class NgWidget implements OnInit, OnDestroy, DoCheck {
 	}
 	public onDragStartEvent(): void {
 		const event: INgWidgetEvent = this.getEventOutput();
-		this._renderer.setElementStyle(this._ngEl.nativeElement, "z-index", String(++this._ngWidgetContainer.zIndex));
+		this._renderer.setElementStyle(this._ngEl.nativeElement, "z-index", String(++this._ngWidgetContainer.zIndex+35));
 		this.onDragStart.emit(event);
 		this.onDragAny.emit(event);
 		this.onChangeStart.emit(event);
