@@ -109,7 +109,7 @@ var NgWidget = (function () {
     });
     NgWidget.prototype.onResizeStartEvent = function () {
         var event = this.getEventOutput();
-        this._renderer.setElementStyle(this._ngEl.nativeElement, 'z-index', String(++this._ngWidgetContainer.zIndex));
+        this._renderer.setElementStyle(this._ngEl.nativeElement, 'z-index', String(++this._ngWidgetContainer.zIndex+25));
         this.onResizeStart.emit(event);
         this.onResizeAny.emit(event);
         this.onChangeStart.emit(event);
@@ -134,7 +134,7 @@ var NgWidget = (function () {
     };
     NgWidget.prototype.onDragStartEvent = function () {
         var event = this.getEventOutput();
-        this._renderer.setElementStyle(this._ngEl.nativeElement, "z-index", String(++this._ngWidgetContainer.zIndex));
+        this._renderer.setElementStyle(this._ngEl.nativeElement, "z-index", String(++this._ngWidgetContainer.zIndex+25));
         this.onDragStart.emit(event);
         this.onDragAny.emit(event);
         this.onChangeStart.emit(event);
